@@ -1,0 +1,7 @@
+ro.display.series=Samsung A51 5G
+ro.product.board=exynos980
+ro.board.platform=universal980
+sys.usb.controller=13200000.dwc3
+ro.boot.dynamic_partitions=true
+#fbe.metadata.wrappedkey=true
+ro.boot.boot_devices=13600000.ufs
