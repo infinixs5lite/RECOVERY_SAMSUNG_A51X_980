@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,recovery/root)
 
 PRODUCT_DEVICE := a51x
-PRODUCT_NAME := twtp_a51x
+PRODUCT_NAME := twrp_a51x
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A516N
 PRODUCT_MANUFACTURER := samsung
