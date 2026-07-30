@@ -62,16 +62,3 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# Flash
 	export OF_FLASHLIGHT_ENABLE=1
 	export OF_FL_PATH1="/sys/devices/virtual/camera/flash/rear_flash"
-	
-	# no decryption - where to store settings? Try microSD
-	USE_MICRO_SD_FOR_SETTINGS=1;
-	if [ "$USE_MICRO_SD_FOR_SETTINGS" = "1" ]; then
-		export FOX_SETTINGS_ROOT_DIRECTORY="/sdcard1/recovery"
-		export FOX_MISCELLANEOUS_ROOT_DIRECTORY=$FOX_SETTINGS_ROOT_DIRECTORY
-	fi
-else
-	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
-		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
-	fi
-fi
-#
