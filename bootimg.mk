@@ -1,7 +1,7 @@
 MKBOOTIMG := device/samsung/a51x/mkbootimg
 MKBOOTIMG := $(DEVICE_PATH)/mkbootimg
 
-FLASH_IMAGE_TARGET ?= $(PRODUCT_OUT)/recovery.tar
+FLASH_IMAGE_TARGET ?= $(PRODUCT_OUT)/recovery.img
 
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(BOOTIMAGE_EXTRA_DEPS)
 	$(call pretty,"Target boot image: $@")
