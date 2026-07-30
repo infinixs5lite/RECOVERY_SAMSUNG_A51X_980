@@ -59,6 +59,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# enable AVB settings
 	export FOX_ENABLE_AVB=1
 
+	# Flash
+	export OF_FLASHLIGHT_ENABLE=1
+	export OF_FL_PATH1="/sys/devices/virtual/camera/flash/rear_flash"
+	
 	# no decryption - where to store settings? Try microSD
 	USE_MICRO_SD_FOR_SETTINGS=1;
 	if [ "$USE_MICRO_SD_FOR_SETTINGS" = "1" ]; then
