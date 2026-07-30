@@ -135,6 +135,9 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # Treble
 BOARD_VNDK_VERSION := current
 
+# Touch fix for incell panels (not yet official, it is a patch on the teamwin gerrit)
+TW_SAMSUNG_TSP_TOUCH_FIX := true
+
 # TWRP specific build flags
 TW_DEVICE_VERSION := nino
 TW_THEME := portrait_hdpi
