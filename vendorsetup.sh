@@ -65,5 +65,3 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
 export ALLOW_MISSING_DEPENDENCIES=true
 chmod a+x device/samsung/a51x/mkbootimg
-repopick 8695
-repopick 8710
