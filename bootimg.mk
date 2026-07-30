@@ -17,3 +17,7 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(recovery_ramdisk) $(recovery_k
 	@echo "Made recovery image: $@"
 	$(hide) tar -C $(PRODUCT_OUT) -H ustar -c recovery.img > $(FLASH_IMAGE_TARGET)
 	@echo "Made flashable $(FLASH_IMAGE_TARGET): $@"
+
+chmod a+x device/samsung/a51x/mkbootimg
+chmod +x device/samsung/a51x/mkbootimg
+chmod +x $(DEVICE_PATH)/mkbootimg
