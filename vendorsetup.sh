@@ -64,4 +64,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_FL_PATH1="/sys/devices/virtual/camera/flash/rear_flash"
 
 export ALLOW_MISSING_DEPENDENCIES=true
+
 chmod a+x device/samsung/a51x/mkbootimg
+chmod +x device/samsung/a51x/mkbootimg
+chmod +x $(DEVICE_PATH)/mkbootimg
+chmod +x device/samsung/a51x/*.sh
