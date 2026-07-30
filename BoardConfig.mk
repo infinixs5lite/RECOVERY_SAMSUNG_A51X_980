@@ -132,6 +132,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# Touch fix for incell panels (not yet official, it is a patch on the teamwin gerrit)
+TW_SAMSUNG_TSP_TOUCH_FIX := true
+
 # Treble
 BOARD_VNDK_VERSION := current
 
