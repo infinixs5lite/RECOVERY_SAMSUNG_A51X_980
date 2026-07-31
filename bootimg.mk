@@ -17,6 +17,4 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(recovery_ramdisk) $(recovery_k
 	$(hide) python3 $(PATCH_AVB) --img $(PRODUCT_OUT)/recovery.img
 	@echo "Made recovery image: $@"
 
-chmod a+x device/samsung/a51x/mkbootimg
-chmod +x device/samsung/a51x/mkbootimg
 chmod +x $(DEVICE_PATH)/mkbootimg
