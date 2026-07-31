@@ -16,5 +16,3 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(recovery_ramdisk) $(recovery_k
 	$(hide) $(AVBTOOL) add_hash_footer --image $@ --partition_size $(BOARD_RECOVERYIMAGE_PARTITION_SIZE) --partition_name recovery --algorithm $(BOARD_AVB_RECOVERY_ALGORITHM) --key $(BOARD_AVB_RECOVERY_KEY_PATH)
 	$(hide) python3 $(PATCH_AVB) --img $(PRODUCT_OUT)/recovery.img
 	@echo "Made recovery image: $@"
-
-chmod +x $(DEVICE_PATH)/mkbootimg
