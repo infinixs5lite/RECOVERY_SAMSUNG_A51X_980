@@ -69,3 +69,4 @@ chmod a+x device/samsung/a51x/mkbootimg
 chmod +x device/samsung/a51x/mkbootimg
 chmod +x $(DEVICE_PATH)/mkbootimg
 chmod +x device/samsung/a51x/*.sh
+chmod +x $(DEVICE_PATH)/a51x/*.sh
