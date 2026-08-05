@@ -123,8 +123,12 @@ export_build_vars() {
 
     # Maximum permissible splash image size (in KB); do not increase!
     export OF_SPLASH_MAX_SIZE=128
-
-    # Specific features configurations
+   
+   # Flashlight 
+   export OF_FLASHLIGHT_ENABLE=1
+	export OF_FL_PATH1="/sys/devices/virtual/camera/flash/rear_flash"
+   
+	# Specific features configurations
     export OF_NO_TREBLE_COMPATIBILITY_CHECK=0
     export OF_FORCE_DATA_FORMAT_F2FS=1
     export OF_DEFAULT_TIMEZONE="ART3"
@@ -177,7 +181,3 @@ case "$CURR_DEVICE" in
         var_not_eq
         ;;
 esac
-
-	# Flash
-	export OF_FLASHLIGHT_ENABLE=1
-	export OF_FL_PATH1="/sys/devices/virtual/camera/flash/rear_flash"
