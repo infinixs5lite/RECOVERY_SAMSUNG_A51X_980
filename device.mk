@@ -1,23 +1,22 @@
-#
-# Copyright (C) 2024 The Android Open Source Project
-# Copyright (C) 2024 The TWRP Open Source Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
-# Enable project quotas and casefolding for emulated storage without sdcardfs
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 31
-
-# API
-PRODUCT_SHIPPING_API_LEVEL := 31
+LOCAL_PATH := device/samsung/a51x
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# fastbootd
+# Fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.1-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
+
+# Props
+PRODUCT_PROPERTY_OVERRIDES +=\
+    ro.fastbootd.available=true
+    ro.boot.dynamic_partitions=true 
+	
+# TWRP Fastbootd
+TW_INCLUDE_FASTBOOTD := true
+
+# TWRP
+TW_INCLUDE_PYTHON := true
+TW_EXCLUDE_APEX := true
