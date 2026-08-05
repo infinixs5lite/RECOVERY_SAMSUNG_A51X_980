@@ -72,7 +72,14 @@ endif
 # Boot
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x10000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos990 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += \
+	androidboot.hardware=exynos980 \
+	androidboot.selinux=permissive \
+	loop.max_part=35 \
+	androidboot.usbcontroller=13600000.dwc3 \
+	androidboot.usbconfigfs=true
+	reboot=panic_warm \
+	androidboot.init_fatal_reboot_target=system
 BOARD_KERNEL_IMAGE_NAME := kernel
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x01000000
@@ -139,7 +146,6 @@ BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
-BOARD_BUILD_DISABLED_VBMETAIMAGE           := true
 
 # Crypto
 PLATFORM_SECURITY_PATCH   := 2099-12-31
