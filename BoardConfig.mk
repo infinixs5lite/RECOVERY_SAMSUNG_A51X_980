@@ -72,7 +72,7 @@ endif
 # Boot
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x10000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos980 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive androidboot.hardware=exynos980 androidboot.hardware=exynos980 loop.max_part=7
 BOARD_KERNEL_IMAGE_NAME := kernel
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x01000000
