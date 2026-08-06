@@ -20,3 +20,9 @@ TW_INCLUDE_FASTBOOTD := true
 # TWRP
 TW_INCLUDE_PYTHON := true
 TW_EXCLUDE_APEX := true
+
+# EROFS utils
+PRODUCT_PACKAGES += \
+    mkfs.erofs.recovery \
+    dump.erofs.recovery \
+    fsck.erofs.recovery
