@@ -85,7 +85,7 @@ BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --board $(TARGET_BOOTLOADER_BOARD_NAME)
 
-BOARD_CUSTOM_BOOTIMG_MK      := $(DEVICE_PATH)/prebuilt/mkboot/bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK      := $(DEVICE_PATH)/mkboot/bootimg.mk
 
 # Compile kernel and DTBs
 TARGET_KERNEL_CONFIG         := a51x_defconfig
