@@ -16,7 +16,7 @@
 
 PATCH_AVB:=device/samsung/a51x/mkboot/avb_digest_patch.py
 
-MKBOOTIMG := $(DEVICE_PATH)/prebuilt/mkboot/mkbootimg
+MKBOOTIMG := $(DEVICE_PATH)/mkboot/mkbootimg
 
 FLASH_IMAGE_TARGET ?= $(PRODUCT_OUT)/boot.tar
 
