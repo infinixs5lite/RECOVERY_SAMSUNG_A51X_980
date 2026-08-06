@@ -1,5 +1,4 @@
 # Board
-ro.product.board=exynos980
 ro.board.platform=universal980
 ro.boot.boot_devices=13600000.ufs
 
